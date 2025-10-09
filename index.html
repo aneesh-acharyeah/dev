@@ -1,696 +1,334 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
     <title>Aneesh G - Professional Portfolio</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Responsive HTML5 Website landing Page for Developers">
-    <meta name="author" content="Aneesh G">
+    <meta name="author" content="3rd Wave Media">
     <link rel="shortcut icon" href="favicon.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet'
+        type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <!-- Global CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Custom CSS -->
-    <style>
-        :root {
-            --primary-color: #3a86ff;
-            --secondary-color: #8338ec;
-            --dark-color: #1a1a2e;
-            --light-color: #f8f9fa;
-            --gray-color: #6c757d;
-            --success-color: #06d6a0;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #fff;
-            scroll-behavior: smooth;
-        }
-        
-        .header {
-            background: linear-gradient(135deg, var(--dark-color) 0%, #16213e 100%);
-            color: white;
-            padding: 3rem 0;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0icGF0dGVybiIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIiBwYXR0ZXJuVHJhbnNmb3JtPSJyb3RhdGUoNDUpIj48cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMDUpIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMWExYTJlIi8+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuKSIvPjwvc3ZnPg==');
-            opacity: 0.3;
-        }
-        
-        .profile-image {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        }
-        
-        .profile-content h1 {
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            font-size: 2.5rem;
-        }
-        
-        .profile-content h2 {
-            font-weight: 400;
-            margin-bottom: 1.5rem;
-            color: rgba(255, 255, 255, 0.8);
-        }
-        
-        .social-icons {
-            display: flex;
-            gap: 15px;
-            margin-top: 1.5rem;
-        }
-        
-        .social-icons a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.15);
-            color: white;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            font-size: 1.2rem;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-        }
-        
-        .social-icons a:hover {
-            background: var(--primary-color);
-            transform: translateY(-5px);
-            border-color: var(--primary-color);
-            box-shadow: 0 5px 15px rgba(58, 134, 255, 0.4);
-        }
-        
-        .btn-cta {
-            background: var(--primary-color);
-            border: none;
-            color: white;
-            padding: 0.75rem 2rem;
-            border-radius: 30px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(58, 134, 255, 0.4);
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 1.1rem;
-        }
-        
-        .btn-cta:hover {
-            background: var(--secondary-color);
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(131, 56, 236, 0.4);
-            color: white;
-        }
-        
-        .section {
-            padding: 5rem 0;
-        }
-        
-        .section-title {
-            position: relative;
-            margin-bottom: 3rem;
-            font-weight: 700;
-            color: var(--dark-color);
-            padding-bottom: 15px;
-        }
-        
-        .section-title::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 70px;
-            height: 4px;
-            background: var(--primary-color);
-            border-radius: 2px;
-        }
-        
-        .card {
-            border: none;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            transition: all 0.4s ease;
-            margin-bottom: 2rem;
-            overflow: hidden;
-            height: 100%;
-        }
-        
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-        }
-        
-        .project-card .card-img-top {
-            height: 220px;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        
-        .project-card:hover .card-img-top {
-            transform: scale(1.05);
-        }
-        
-        .badge-tech {
-            background: var(--primary-color);
-            color: white;
-            padding: 0.4rem 1rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            margin-right: 0.5rem;
-            margin-bottom: 0.5rem;
-            display: inline-block;
-            font-weight: 500;
-        }
-        
-        .skill-item {
-            margin-bottom: 1.5rem;
-        }
-        
-        .skill-name {
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            color: var(--dark-color);
-            display: flex;
-            justify-content: space-between;
-        }
-        
-        .skill-bar {
-            height: 10px;
-            background: #e9ecef;
-            border-radius: 5px;
-            overflow: hidden;
-            margin-top: 5px;
-        }
-        
-        .skill-level {
-            height: 100%;
-            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-            border-radius: 5px;
-            transition: width 1s ease-in-out;
-        }
-        
-        .timeline {
-            position: relative;
-            padding-left: 2rem;
-        }
-        
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 7px;
-            top: 0;
-            bottom: 0;
-            width: 3px;
-            background: var(--primary-color);
-            border-radius: 3px;
-        }
-        
-        .timeline-item {
-            position: relative;
-            margin-bottom: 2.5rem;
-            padding: 1.5rem;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        }
-        
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -2.2rem;
-            top: 2rem;
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            background: var(--primary-color);
-            border: 4px solid white;
-            box-shadow: 0 0 0 3px var(--primary-color);
-        }
-        
-        .footer {
-            background: var(--dark-color);
-            color: white;
-            padding: 2.5rem 0;
-            text-align: center;
-        }
-        
-        .language-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .stars {
-            color: #ffc107;
-        }
-        
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-top: 1rem;
-        }
-        
-        .contact-info a {
-            color: var(--primary-color);
-            text-decoration: none;
-            transition: color 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .contact-info a:hover {
-            color: var(--secondary-color);
-        }
-        
-        @media (max-width: 768px) {
-            .profile-image {
-                width: 150px;
-                height: 150px;
-            }
-            
-            .profile-content h1 {
-                font-size: 2rem;
-            }
-            
-            .section {
-                padding: 3rem 0;
-            }
-            
-            .social-icons {
-                justify-content: center;
-            }
-            
-            .btn-cta {
-                width: 100%;
-                justify-content: center;
-            }
-        }
-        
-        /* Animation for skill bars */
-        @keyframes slideIn {
-            from { width: 0; }
-            to { width: attr(data-level); }
-        }
-        
-        /* Make sure links are clearly visible */
-        a {
-            cursor: pointer;
-        }
-        
-        /* Highlight active section */
-        .active-section {
-            border-left: 4px solid var(--primary-color);
-            padding-left: 15px;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
+    <!-- github acitivity css -->
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
+    <link rel="stylesheet" href="http://caseyscarborough.github.io/github-activity/github-activity-0.1.0.min.css">
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+
+
 </head>
 
 <body>
-    <!-- Header Section -->
+    <!-- ******HEADER****** -->
     <header class="header">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-3 text-center text-md-start mb-4 mb-md-0">
-                    <img class="profile-image" src="assets/images/profile.jpg" alt="Aneesh G">
-                </div>
-                <div class="col-md-6 text-center text-md-start">
-                    <div class="profile-content">
-                        <h1>Aneesh G</h1>
-                        <h2>Web Developer</h2>
-                        <div class="contact-info">
-                            <a href="mailto:aneeshg2001@gmail.com">
-                                <i class="fas fa-envelope"></i> aneeshg2001@gmail.com
-                            </a>
-                            <a href="#">
-                                <i class="fas fa-map-marker-alt"></i> Bengaluru, Karnataka
-                            </a>
-                        </div>
-                        <div class="social-icons">
-                            <a href="https://www.linkedin.com/in/aneesh-acharyeah/" target="_blank" title="LinkedIn">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                            <a href="https://github.com/aneesh-acharyeah" target="_blank" title="GitHub">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="mailto:aneeshg2001@gmail.com" title="Email">
-                                <i class="fas fa-envelope"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 text-center text-md-end mt-4 mt-md-0">
-                    <a class="btn btn-cta" href="mailto:aneeshg2001@gmail.com">
-                        <i class="fas fa-paper-plane"></i> Contact Me
-                    </a>
-                </div>
+            <img style="width: 180px; height: 230px;" class="profile-image img-responsive pull-left"
+                src="assets/images/profile.jpg" alt="Aneesh G" />
+            <div class="profile-content pull-left">
+                <h1 class="name">Aneesh G</h1>
+                <h2 class="desc">Web Developer</h2>
+                <ul class="social list-inline">
+                    <li><a href="https://www.linkedin.com/in/aneesh-acharyeah/"><i class="fa fa-linkedin"></i></a></li>
+                    <li class="last-item"><a href="https://github.com/aneesh-acharyeah"><i
+                                class="fa fa-github-alt"></i></a></li>
+                </ul>
             </div>
+            <a class="btn btn-cta-primary pull-right" href="mailto:aneeshg2001@gmail.com" target="_blank"><i
+                    class="fa fa-paper-plane"></i> Contact Me</a>
         </div>
     </header>
 
-    <!-- About Section -->
-    <section class="section" id="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="row">
-                <div class="col-lg-10 mx-auto">
-                    <div class="card p-4">
-                        <div class="card-body">
-                            <p class="mb-3">I am Aneesh G, a passionate developer with a strong foundation in web technologies and application development. Currently pursuing a Master's in Computer Applications at PES University, I have built a solid portfolio of projects and professional experience in web development, content management, and SEO.</p>
-                            
-                            <p class="mb-3">My technical expertise spans across HTML, CSS, JavaScript, PHP, MySQL, and modern frameworks like React, Flask, Node.JS and Django. I thrive on crafting responsive, user-friendly applications, with projects ranging from a doctor appointment booking system to a multimedia gallery platform.</p>
-                            
-                            <p>I am dedicated to continuous learning, having completed certifications in modern JavaScript, Python, and web development. My work is driven by a desire to create seamless digital experiences and bring innovative solutions to life.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div class="container sections-wrapper">
+        <div class="row">
+            <div class="primary col-md-8 col-sm-12 col-xs-12">
+                <section class="about section">
+                    <div class="section-inner">
+                        <h2 class="heading">About Me</h2>
+                        <div class="content">
+                            <p>I am Aneesh G, a passionate developer with a strong foundation in web technologies and
+                                application development. Currently pursuing a Master's in Computer Applications at PES
+                                University, I have built a solid portfolio of projects and professional experience in
+                                web development, content management, and SEO.</p>
 
-    <!-- Projects Section -->
-    <section class="section bg-light" id="projects">
-        <div class="container">
-            <h2 class="section-title">Latest Projects</h2>
-            <div class="row">
-                <!-- Project 1 -->
-                <div class="col-lg-6 mb-4">
-                    <div class="card project-card">
-                        <div class="position-relative">
-                            <img src="assets/images/projects/prj.png" class="card-img-top" alt="Advanced Web Automation Bot">
-                            <div class="position-absolute top-0 end-0 m-3">
-                                <span class="badge bg-primary">Bot</span>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Advanced Web Automation Bot</h5>
-                            <p class="card-text">Automated "Cookie Clicker" gameplay with intelligent resource management and optimization</p>
-                            <div class="mb-3">
-                                <span class="badge-tech">Selenium</span>
-                                <span class="badge-tech">Python</span>
-                                <span class="badge-tech">Automation</span>
-                            </div>
-                            <p class="card-text">Developed a high-performance web automation bot to autonomously play "Cookie Clicker," leveraging Selenium for seamless browser interaction and real-time decision-making.</p>
-                            <p>Built a sophisticated resource optimization engine that dynamically analyzes in-game metrics, enabling intelligent upgrades to maximize efficiency and progression.</p>
-                            <p>Integrated robust exception handling, ensuring fault tolerance and continuous operation under varying web conditions and browser behaviors.</p>
-                            <p>Optimized automation speed through precise tuning of interaction intervals, significantly enhancing performance and minimizing resource overhead during extended gameplay.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 2 -->
-                <div class="col-lg-6 mb-4">
-                    <div class="card project-card">
-                        <div class="position-relative">
-                            <img src="assets/images/projects/prj1.png" class="card-img-top" alt="Password Manager Application">
-                            <div class="position-absolute top-0 end-0 m-3">
-                                <span class="badge bg-success">App</span>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Password Manager Application</h5>
-                            <p class="card-text">Developed a password manager with a modern UI in Tkinter, featuring a secure password generator and easy data management.</p>
-                            <div class="mb-3">
-                                <span class="badge-tech">Python</span>
-                                <span class="badge-tech">Tkinter</span>
-                                <span class="badge-tech">Security</span>
-                            </div>
-                            <p class="card-text">Developed a modern and user-friendly password manager application using Tkinter, featuring a sleek graphical user interface. The application includes a secure password generator that creates complex passwords from letters, numbers, and symbols, enhancing security. Usability is improved with functionalities such as copying passwords to the clipboard and straightforward data entry. User credentials, including website, email, and password, are saved to a text file in an organized format. The focus on clean design and an organized layout ensures an intuitive and seamless user experience.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                            <p>My technical expertise spans across HTML, CSS, JavaScript, PHP, MySQL, and modern
+                                frameworks like React, Flask,Node.JS and Django. I thrive on crafting responsive,
+                                user-friendly
+                                applications, with projects ranging from a doctor appointment booking system to a
+                                multimedia gallery platform.</p>
 
-    <!-- Skills Section -->
-    <section class="section" id="skills">
-        <div class="container">
-            <h2 class="section-title">Skills</h2>
-            <div class="row">
-                <div class="col-lg-10 mx-auto">
-                    <div class="card p-4">
-                        <div class="card-body">
-                            <p class="mb-4">I have honed a diverse set of technical and analytical skills that span across multiple programming languages, frameworks, and tools. With a focus on web development and application design, I combine coding expertise with practical experience to deliver high-quality, efficient solutions.</p>
-                            
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="skill-item">
-                                        <div class="skill-name">
-                                            <span>Languages</span>
-                                            <span>85%</span>
-                                        </div>
-                                        <div class="skill-bar">
-                                            <div class="skill-level" style="width: 85%"></div>
-                                        </div>
-                                        <small class="text-muted">Python, JavaScript, PHP & SQL</small>
-                                    </div>
-                                    
-                                    <div class="skill-item">
-                                        <div class="skill-name">
-                                            <span>Frameworks</span>
-                                            <span>80%</span>
-                                        </div>
-                                        <div class="skill-bar">
-                                            <div class="skill-level" style="width: 80%"></div>
-                                        </div>
-                                        <small class="text-muted">React, Node.js, Flask & Django</small>
+                            <p>I am dedicated to continuous learning, having completed certifications in modern
+                                JavaScript, Python, and web development. My work is driven by a desire to create
+                                seamless digital experiences and bring innovative solutions to life.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="latest section">
+                    <div class="section-inner">
+                        <h2 class="heading">Latest Projects</h2>
+                        <div class="content">
+
+                            <div class="item featured text-center">
+                                <h3 class="title">Advanced Web Automation Bot</h3>
+                                <p class="summary">Automated "Cookie Clicker" gameplay with intelligent resource
+                                    management and optimization</p>
+                                <div class="featured-image">
+
+                                    <img class="img-responsive project-image" src="assets/images/projects/prj.png"
+                                        alt="project name" />
+
+                                    <div class="ribbon">
+                                        <div class="text">Bot</div>
                                     </div>
                                 </div>
-                                
-                                <div class="col-md-6">
-                                    <div class="skill-item">
-                                        <div class="skill-name">
-                                            <span>Tools</span>
-                                            <span>75%</span>
-                                        </div>
-                                        <div class="skill-bar">
-                                            <div class="skill-level" style="width: 75%"></div>
-                                        </div>
-                                        <small class="text-muted">Git, Google Analytics & Search Console</small>
-                                    </div>
-                                    
-                                    <div class="skill-item">
-                                        <div class="skill-name">
-                                            <span>Design & Development</span>
-                                            <span>80%</span>
-                                        </div>
-                                        <div class="skill-bar">
-                                            <div class="skill-level" style="width: 80%"></div>
-                                        </div>
-                                        <small class="text-muted">HTML, CSS, jQuery & Web Hosting</small>
-                                    </div>
+
+                                <div class="desc text-left">
+                                    <p>Developed a high-performance web automation bot to autonomously play "Cookie
+                                        Clicker," leveraging Selenium for seamless browser interaction and real-time
+                                        decision-making.</p>
+                                    <p>Built a sophisticated resource optimization engine that dynamically analyzes
+                                        in-game metrics, enabling intelligent upgrades to maximize efficiency and
+                                        progression.</p>
+                                    <p>Integrated robust exception handling, ensuring fault tolerance and continuous
+                                        operation under varying web conditions and browser behaviors.</p>
+                                    <p>Optimized automation speed through precise tuning of interaction intervals,
+                                        significantly enhancing performance and minimizing resource overhead during
+                                        extended gameplay.</p>
                                 </div>
                             </div>
+                            <hr class="divider" />
+                            <div class="item featured text-center">
+                                <h3 class="title">Password Manager Application</h3>
+                                <p class="summary">Developed a password manager with a modern UI in Tkinter, featuring a
+                                    secure password generator and easy data management.</p>
+                                <div class="featured-image">
+
+                                    <img class="img-responsive project-image" src="assets/images/projects/prj1.png"
+                                        alt="password-manager" />
+
+                                    <div class="ribbon">
+                                        <div class="text">App</div>
+                                    </div>
+                                </div>
+
+                                <div class="desc text-left">
+                                    <p>Developed a modern and user-friendly password manager application using Tkinter,
+                                        featuring a sleek graphical user interface. The application includes a secure
+                                        password generator that creates complex passwords from letters, numbers, and
+                                        symbols, enhancing security. Usability is improved with functionalities such as
+                                        copying passwords to the clipboard and straightforward data entry. User
+                                        credentials, including website, email, and password, are saved to a text file in
+                                        an organized format. The focus on clean design and an organized layout ensures
+                                        an intuitive and seamless user experience.</p>
+                                </div>
+                            </div>
+                            <hr class="divider" />
+
+
+
+
+
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                </section>
 
-    <!-- Experience & Education Section -->
-    <section class="section bg-light" id="experience">
-        <div class="container">
-            <div class="row">
-                <!-- Experience -->
-                <div class="col-lg-6 mb-5 mb-lg-0">
-                    <h2 class="section-title">Work Experience</h2>
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <h5>PHP Developer Intern</h5>
-                            <p class="text-primary mb-1">CCBUL CONSULTING LLP | FEB 2025 - Ongoing</p>
-                            <ul class="mt-3">
-                                <li>Built and optimized PHP-based backend systems, enhancing API response times by 30% through query optimization and caching strategies.</li>
-                                <li>Designed and integrated secure RESTful APIs for seamless real-time data exchange between frontend and backend.</li>
-                                <li>Implemented authentication, authorization, and data validation mechanisms, improving application security and reducing vulnerabilities.</li>
-                                <li>Researched and adopted emerging web technologies to improve scalability and security.</li>
+                <section class="experience section">
+                    <div class="section-inner">
+                        <h2 class="heading">Work Experience</h2>
+                        <div class="content">
+                            <div class="item">
+                                <h3 class="title">PHP Developer Intern - <span class="place"><a href="#">CCBUL CONSULTING LLP</a></span> <span class="year">(FEB 2025 - Ongoing)</span></h3>
+                                <p>Built and optimized PHP-based backend systems, enhancing API response times by 30% through query
+ optimization and caching strategies.</p>
+                                <p> Designed and integrated secure RESTful APIs for seamless real-time data exchange between frontend and backend.</p>
+                                <p> Implemented authentication, authorization, and data validation mechanisms, improving application security and
+ reducing vulnerabilities.</p>
+                                <p>Researched and adopted emerging web technologies to improve scalability and security.</p>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+            <div class="secondary col-md-4 col-sm-12 col-xs-12">
+                <aside class="info aside section">
+                    <div class="section-inner">
+                        <h2 class="heading sr-only">Basic Information</h2>
+                        <div class="content">
+                            <ul class="list-unstyled">
+                                <li><i class="fa fa-map-marker"></i><span class="sr-only">Location:</span>Bengaluru,
+                                    Karnataka</li>
+                                <li><i class="fa fa-envelope-o"></i><span class="sr-only">Email:</span><a
+                                        href="mailto:aneeshg2001@gmail.com">aneeshg2001@gmail.com</a></li>
                             </ul>
                         </div>
                     </div>
-                </div>
-                
-                <!-- Education -->
-                <div class="col-lg-6">
-                    <h2 class="section-title">Education</h2>
-                    <div class="card p-4">
-                        <div class="card-body">
-                            <div class="d-flex align-items-start mb-4">
-                                <div class="flex-shrink-0">
-                                    <i class="fas fa-graduation-cap fa-2x text-primary"></i>
+                </aside>
+
+                <aside class="skills aside section">
+                    <div class="section-inner">
+                        <h2 class="heading">Skills</h2>
+                        <div class="content">
+                            <p class="intro">
+                                I have honed a diverse set of technical and analytical skills that span across multiple
+                                programming languages, frameworks, and tools. With a focus on web development and
+                                application design, I combine coding expertise with practical experience to deliver
+                                high-quality, efficient solutions. </p>
+
+                            <div class="skillset">
+
+                                <div class="item">
+                                    <h3 class="level-title"> Python, JavaScript, PHP &amp; SQL</h3><span
+                                        class="level-label" data-toggle="tooltip" data-placement="left"
+                                        data-animation="true"
+                                        title="You can use the tooltip to add more info...">Languages</span>
+                                    <!-- <div class="level-bar">
+                                        <div class="level-bar-inner" data-level="85%">
+                                        </div>
+                                    </div>  -->
                                 </div>
-                                <div class="flex-grow-1 ms-3">
-                                    <h5 class="mb-1">Master of Computer Applications</h5>
-                                    <p class="mb-1 text-primary">PES UNIVERSITY</p>
-                                    <p class="text-muted">2023-2025</p>
+
+                                <div class="item">
+                                    <h3 class="level-title">React, Node.js, Flask &amp; Django</h3><span
+                                        class="level-label">Frameworks</span>
+                                    <!-- <div class="level-bar">
+                                        <div class="level-bar-inner" data-level="96%">
+                                        </div>
+                                    </div>  -->
+                                </div>
+
+                                <div class="item">
+                                    <h3 class="level-title">Git, Google Analytics &amp; Search Console</h3><span
+                                        class="level-label">Tools</span>
+                                    <!-- <div class="level-bar">
+                                        <div class="level-bar-inner" data-level="96%">
+                                        </div>
+                                    </div>  -->
+                                </div>
+
+                                <div class="item">
+                                    <h3 class="level-title">HTML, CSS, jQuery &amp; Web Hosting</h3><span
+                                        class="level-label">Design & Dev</span>
+                                    <!-- <div class="level-bar">
+                                        <div class="level-bar-inner" data-level="72%">
+                                        </div>
+                                    </div>  -->
+                                </div>
+                                <div class="item">
+                                    <h3 class="level-title">Leadership, Research &amp; Problem-Solving</h3><span
+                                        class="level-label">Soft Skills</span>
+                                    <!-- <div class="level-bar">
+                                        <div class="level-bar-inner" data-level="72%">
+                                        </div>
+                                    </div>  -->
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- Languages -->
-                    <h2 class="section-title mt-5">Languages</h2>
-                    <div class="card p-4">
-                        <div class="card-body">
-                            <div class="language-item">
-                                <span><strong>Kannada:</strong></span>
-                                <span class="stars">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </span>
+                </aside>
+
+
+
+                <aside class="education aside section">
+                    <div class="section-inner">
+                        <h2 class="heading">Education</h2>
+                        <div class="content">
+                            <div class="item">
+                                <h3 class="title"><i class="fa fa-graduation-cap"></i> Master of Computer Applications
+                                </h3>
+                                <h4 class="university">PES UNIVERSITY <span class="year">(2023-2025)</span>
+                                </h4>
                             </div>
-                            <div class="language-item">
-                                <span><strong>English:</strong></span>
-                                <span class="stars">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                </span>
-                            </div>
-                            <div class="language-item">
-                                <span><strong>Hindi:</strong></span>
-                                <span class="stars">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                </span>
-                            </div>
+
                         </div>
                     </div>
-                </div>
+                </aside>
+
+                <aside class="languages aside section">
+                    <div class="section-inner">
+                        <h2 class="heading">Languages</h2>
+                        <div class="content">
+                            <ul class="list-unstyled">
+                                <li class="item">
+                                    <span class="title"><strong>Kannada:</strong></span>
+                                    <span class="level">Native Speaker <br class="visible-xs" /><i
+                                            class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                                            class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                                            class="fa fa-star"></i> </span>
+                                </li>
+                                <li class="item">
+                                    <span class="title"><strong>English:</strong></span>
+                                    <span class="level">Professional Proficiency <br class="visible-sm visible-xs" /><i
+                                            class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                                            class="fa fa-star"></i> <i class="fa fa-star"></i></span>
+                                </li>
+                                <li class="item">
+                                    <span class="title"><strong>Hindi:</strong></span>
+                                    <span class="level">Professional Proficiency <br class="visible-sm visible-xs" /><i
+                                            class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                                            class="fa fa-star"></i> <i class="fa fa-star"></i></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </aside>
+
+
+                <aside class="list conferences aside section">
+                    <div class="section-inner">
+                        <h2 class="heading">Certifications</h2>
+                        <div class="content">
+                            <ul class="list-unstyled">
+                                <li><i class="fa fa-certificate"></i> The Modern Javascript Bootcamp Course (Udemy)</li>
+                                <li><i class="fa fa-certificate"></i> 100 Days of
+                                    Code: The Complete Python Pro Bootcamp
+                                    (Udemy)</li>
+                                <li><i class="fa fa-certificate"></i>The Web
+                                    Developer Bootcamp
+                                    (Udemy)</li>
+                                <li><i class="fa fa-certificate"></i>Python</a>
+                                    (Certified By HackerRank)
+                                <li><i class="fa fa-certificate"></i>Javascript
+                                    (Certified By HackerRank)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </aside>
+
+
             </div>
         </div>
-    </section>
-
-    <!-- Certifications Section -->
-    <section class="section" id="certifications">
-        <div class="container">
-            <h2 class="section-title">Certifications</h2>
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <div class="card p-4">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <div class="d-flex align-items-center">
-                                        <i class="fas fa-certificate text-primary me-3"></i>
-                                        <div>
-                                            <h6 class="mb-0">The Modern Javascript Bootcamp Course</h6>
-                                            <small class="text-muted">Udemy</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <div class="d-flex align-items-center">
-                                        <i class="fas fa-certificate text-primary me-3"></i>
-                                        <div>
-                                            <h6 class="mb-0">100 Days of Code: The Complete Python Pro Bootcamp</h6>
-                                            <small class="text-muted">Udemy</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <div class="d-flex align-items-center">
-                                        <i class="fas fa-certificate text-primary me-3"></i>
-                                        <div>
-                                            <h6 class="mb-0">The Web Developer Bootcamp</h6>
-                                            <small class="text-muted">Udemy</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <div class="d-flex align-items-center">
-                                        <i class="fas fa-certificate text-primary me-3"></i>
-                                        <div>
-                                            <h6 class="mb-0">Python</h6>
-                                            <small class="text-muted">HackerRank</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <div class="d-flex align-items-center">
-                                        <i class="fas fa-certificate text-primary me-3"></i>
-                                        <div>
-                                            <h6 class="mb-0">Javascript</h6>
-                                            <small class="text-muted">HackerRank</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
+    </div>
     <footer class="footer">
-        <div class="container">
-            <p class="mb-2">&copy; 2025 Aneesh G. All rights reserved.</p>
-            <p class="text-muted">Designed with <i class="fas fa-heart text-danger"></i> by Aneesh G</p>
-        </div>
+        <div class="container text-center">
+            <small class="copyright"> &copy; 2025 Aneesh G</small>
+        </div><!--//container-->
     </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <script>
-        // Simple script to animate skill bars when they come into view
-        document.addEventListener('DOMContentLoaded', function() {
-            // Animate skill bars on page load
-            setTimeout(function() {
-                const skillBars = document.querySelectorAll('.skill-level');
-                skillBars.forEach(bar => {
-                    const width = bar.style.width;
-                    bar.style.width = '0';
-                    setTimeout(() => {
-                        bar.style.width = width;
-                    }, 300);
-                });
-            }, 500);
-            
-            // Make sure all links are working and visible
-            console.log("All social and contact links are now functional");
-        });
-    </script>
+
+    <!-- Javascript -->
+    <script type="text/javascript" src="assets/plugins/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/jquery-rss/dist/jquery.rss.min.js"></script>
+    <!-- github activity plugin -->
+    <script type="text/javascript"
+        src="http://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
+    <script type="text/javascript"
+        src="http://caseyscarborough.github.io/github-activity/github-activity-0.1.0.min.js"></script>
+    <!-- custom js -->
+    <script type="text/javascript" src="assets/js/main.js"></script>
 </body>
+
 </html>
