@@ -1,146 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Aneesh G - Portfolio</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Modern responsive portfolio for developer Aneesh G">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:700|Roboto:400,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-    <style>
-        body {
-            background: #f9fafc;
-            font-family: 'Roboto', sans-serif;
-            color: #333;
-        }
-        .header {
-            background: linear-gradient(90deg, #4B79A1 0%, #283E51 100%);
-            padding: 2.5rem 0;
-            color: #fff;
-        }
-        .profile-image {
-            border-radius: 18px;
-            border: 7px solid #fff;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.13);
-            width: 160px;
-            height: 200px;
-            object-fit: cover;
-            margin-right: 2rem;
-        }
-        .name { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 2.25rem; margin-bottom: .5rem; }
-        .desc { font-size: 1.2rem; color: #d0e6ff; margin-bottom: 1rem; }
-        .social li {
-            display: inline-block;
-            margin-right: 10px;
-        }
-        .social a { color: #fff; font-size: 1.25rem; }
-        .btn-cta-primary {
-            background: #ffd600;
-            color: #283E51;
-            font-weight: 700;
-            border: none;
-            border-radius: 24px;
-            padding: .65rem 1.2rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.10);
-        }
-        .btn-cta-primary:hover { background: #ffc400; color: #4B79A1; }
-        .sections-wrapper {
-            margin-top: 2.5rem;
-        }
-        .section { margin-bottom: 2rem; }
-        .section-inner {
-            background: #fff;
-            box-shadow: 0 2px 8px rgba(33, 150, 243, .09);
-            border-radius: 18px;
-            padding: 2rem;
-        }
-        .heading {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            color: #4B79A1;
-            font-size: 1.3rem;
-            margin-bottom: 1.5rem;
-        }
-        .featured-image {
-            position: relative;
-            margin-bottom: 15px;
-        }
-        .project-image {
-            border-radius: 14px;
-            box-shadow: 0 1px 7px rgba(0,0,0,.12);
-            width: 100%;
-            max-width: 320px;
-            height: auto;
-        }
-        .ribbon {
-            position: absolute;
-            top: 10px;
-            left: -10px;
-            background: #ffd600;
-            color: #283E51;
-            font-weight: 700;
-            padding: 0.3rem 0.9rem;
-            border-radius: 12px 0 12px 0;
-            font-size: 0.9rem;
-        }
-        .divider {
-            border-top: 2px dotted #e0e7ef;
-            margin: 2.2rem 0;
-        }
-        .aside .section-inner { background: #f3f7fa; box-shadow: none; }
-        .skills .skillset .item { margin-bottom: 1rem; }
-        .skills .level-title { font-weight: 500; }
-        .skills .level-label { font-size: 0.95rem; color: #466084; background: #e0eeff; border-radius: 8px; padding: 2px 10px; margin-left: 8px;}
-        .languages .item { margin-bottom: .65rem; }
-        .languages .title { font-weight: 500; }
-        .languages .level { color: #4B79A1; font-size: .95rem; }
-        .fa-star { color: #ffd600; }
-        .footer {
-            background: #283E51;
-            color: #fff;
-            padding: 16px 0;
-            margin-top: 2.5rem;
-            font-size: 1rem;
-        }
-        @media (max-width: 991px) {
-            .header .container { flex-direction: column; align-items: center; }
-            .profile-content { text-align: center; margin-top: 1.3rem; margin-left: 0; }
-        }
-    </style>
+<html lang="en">
+
+<head>
+    <title>Aneesh G - Professional Portfolio</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Responsive HTML5 Website landing Page for Developers">
+    <meta name="author" content="3rd Wave Media">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet'
+        type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
+    <!-- github acitivity css -->
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
+    <link rel="stylesheet" href="http://caseyscarborough.github.io/github-activity/github-activity-0.1.0.min.css">
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+
+
 </head>
+
 <body>
-    <!-- Header Section -->
+    <!-- ******HEADER****** -->
     <header class="header">
-        <div class="container d-flex align-items-center">
-            <img class="profile-image" src="assets/images/profile.jpg" alt="Aneesh G" />
-            <div class="profile-content">
+        <div class="container">
+            <img style="width: 180px; height: 230px;" class="profile-image img-responsive pull-left"
+                src="assets/images/profile.jpg" alt="Aneesh G" />
+            <div class="profile-content pull-left">
                 <h1 class="name">Aneesh G</h1>
                 <h2 class="desc">Web Developer</h2>
-                <ul class="social list-unstyled mb-2">
-                    <li><a href="https://www.linkedin.com/in/aneesh-acharyeah/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-                    <li><a href="https://github.com/aneesh-acharyeah" target="_blank"><i class="fab fa-github"></i></a></li>
+                <ul class="social list-inline">
+                    <li><a href="https://www.linkedin.com/in/aneesh-acharyeah/"><i class="fa fa-linkedin"></i></a></li>
+                    <li class="last-item"><a href="https://github.com/aneesh-acharyeah"><i
+                                class="fa fa-github-alt"></i></a></li>
                 </ul>
             </div>
-            <a class="btn btn-cta-primary ml-auto" href="mailto:aneeshg2001@gmail.com" target="_blank"><i class="fa fa-paper-plane"></i> Contact Me</a>
+            <a class="btn btn-cta-primary pull-right" href="mailto:aneeshg2001@gmail.com" target="_blank"><i
+                    class="fa fa-paper-plane"></i> Contact Me</a>
         </div>
     </header>
 
-    <!-- Main Sections -->
     <div class="container sections-wrapper">
         <div class="row">
-            <div class="col-lg-8 col-md-12">
+            <div class="primary col-md-8 col-sm-12 col-xs-12">
                 <section class="about section">
                     <div class="section-inner">
                         <h2 class="heading">About Me</h2>
                         <div class="content">
-                            <p>I'm Aneesh G, a passionate developer with deep expertise in web technologies and application design. Currently pursuing a Master's in Computer Applications at PES University, I have hands-on experience in web development, content management, and SEO strategies.</p>
-                            <p>My technical toolkit covers HTML, CSS, JavaScript, PHP, MySQL, plus modern frameworks like React, Flask, Node.js, and Django. I love crafting responsive, user-centered apps – from doctor appointment booking platforms to multimedia galleries.</p>
-                            <p>Continuous learning drives me; modern certifications in JavaScript, Python, and web dev are part of my journey, all aimed at building powerful, seamless digital experiences.</p>
+                            <p>I am Aneesh G, a passionate developer with a strong foundation in web technologies and
+                                application development. Currently pursuing a Master's in Computer Applications at PES
+                                University, I have built a solid portfolio of projects and professional experience in
+                                web development, content management, and SEO.</p>
+
+                            <p>My technical expertise spans across HTML, CSS, JavaScript, PHP, MySQL, and modern
+                                frameworks like React, Flask,Node.JS and Django. I thrive on crafting responsive,
+                                user-friendly
+                                applications, with projects ranging from a doctor appointment booking system to a
+                                multimedia gallery platform.</p>
+
+                            <p>I am dedicated to continuous learning, having completed certifications in modern
+                                JavaScript, Python, and web development. My work is driven by a desire to create
+                                seamless digital experiences and bring innovative solutions to life.</p>
                         </div>
                     </div>
                 </section>
+
                 <section class="latest section">
                     <div class="section-inner">
                         <h2 class="heading">Latest Projects</h2>
@@ -148,124 +79,256 @@
 
                             <div class="item featured text-center">
                                 <h3 class="title">Advanced Web Automation Bot</h3>
-                                <p class="summary">Automated "Cookie Clicker" using Selenium, intelligent resource management, and advanced optimization.</p>
+                                <p class="summary">Automated "Cookie Clicker" gameplay with intelligent resource
+                                    management and optimization</p>
                                 <div class="featured-image">
-                                    <img class="project-image" src="assets/images/projects/prj.png" alt="Web Automation Bot" />
-                                    <div class="ribbon">Bot</div>
+
+                                    <img class="img-responsive project-image" src="assets/images/projects/prj.png"
+                                        alt="project name" />
+
+                                    <div class="ribbon">
+                                        <div class="text">Bot</div>
+                                    </div>
                                 </div>
+
                                 <div class="desc text-left">
-                                    <p>Developed a high-performance bot for Cookie Clicker using Selenium for browser automation and smart upgrades.</p>
-                                    <p>Built dynamic resource optimization to maximize efficiency, with robust exception handling for continuous operation.</p>
-                                    <p>Precisely tuned interaction intervals for speed and reliability in long gameplay sessions.</p>
+                                    <p>Developed a high-performance web automation bot to autonomously play "Cookie
+                                        Clicker," leveraging Selenium for seamless browser interaction and real-time
+                                        decision-making.</p>
+                                    <p>Built a sophisticated resource optimization engine that dynamically analyzes
+                                        in-game metrics, enabling intelligent upgrades to maximize efficiency and
+                                        progression.</p>
+                                    <p>Integrated robust exception handling, ensuring fault tolerance and continuous
+                                        operation under varying web conditions and browser behaviors.</p>
+                                    <p>Optimized automation speed through precise tuning of interaction intervals,
+                                        significantly enhancing performance and minimizing resource overhead during
+                                        extended gameplay.</p>
                                 </div>
                             </div>
                             <hr class="divider" />
                             <div class="item featured text-center">
                                 <h3 class="title">Password Manager Application</h3>
-                                <p class="summary">Modern Tkinter password manager app featuring secure generators and easy data management.</p>
+                                <p class="summary">Developed a password manager with a modern UI in Tkinter, featuring a
+                                    secure password generator and easy data management.</p>
                                 <div class="featured-image">
-                                    <img class="project-image" src="assets/images/projects/prj1.png" alt="Password Manager" />
-                                    <div class="ribbon">App</div>
+
+                                    <img class="img-responsive project-image" src="assets/images/projects/prj1.png"
+                                        alt="password-manager" />
+
+                                    <div class="ribbon">
+                                        <div class="text">App</div>
+                                    </div>
                                 </div>
+
                                 <div class="desc text-left">
-                                    <p>Built a user-friendly password manager in Tkinter with a sleek UI, secure generator for random passwords, and data storage features.</p>
-                                    <p>Enhanced usability with clipboard and organized credentials storage, focusing on clean design and simple layout.</p>
+                                    <p>Developed a modern and user-friendly password manager application using Tkinter,
+                                        featuring a sleek graphical user interface. The application includes a secure
+                                        password generator that creates complex passwords from letters, numbers, and
+                                        symbols, enhancing security. Usability is improved with functionalities such as
+                                        copying passwords to the clipboard and straightforward data entry. User
+                                        credentials, including website, email, and password, are saved to a text file in
+                                        an organized format. The focus on clean design and an organized layout ensures
+                                        an intuitive and seamless user experience.</p>
                                 </div>
                             </div>
+                            <hr class="divider" />
+
+
+
+
+
                         </div>
                     </div>
                 </section>
+
                 <section class="experience section">
                     <div class="section-inner">
                         <h2 class="heading">Work Experience</h2>
                         <div class="content">
                             <div class="item">
                                 <h3 class="title">PHP Developer Intern - <span class="place"><a href="#">CCBUL CONSULTING LLP</a></span> <span class="year">(FEB 2025 - Ongoing)</span></h3>
-                                <p>Optimized PHP-based backend systems, boosting API speed by 30% via query optimization and caching.</p>
-                                <p>Designed secure RESTful APIs for real-time client-server exchanges; implemented authentication and data validation for robust security.</p>
-                                <p>Continuously improved scalability by researching and adopting emerging technologies.</p>
+                                <p>Built and optimized PHP-based backend systems, enhancing API response times by 30% through query
+ optimization and caching strategies.</p>
+                                <p> Designed and integrated secure RESTful APIs for seamless real-time data exchange between frontend and backend.</p>
+                                <p> Implemented authentication, authorization, and data validation mechanisms, improving application security and
+ reducing vulnerabilities.</p>
+                                <p>Researched and adopted emerging web technologies to improve scalability and security.</p>
                             </div>
+
+
                         </div>
                     </div>
                 </section>
+
             </div>
-            <!-- Sidebar -->
-            <div class="col-lg-4 col-md-12">
+            <div class="secondary col-md-4 col-sm-12 col-xs-12">
                 <aside class="info aside section">
                     <div class="section-inner">
-                        <h2 class="heading sr-only">Basic Info</h2>
+                        <h2 class="heading sr-only">Basic Information</h2>
                         <div class="content">
                             <ul class="list-unstyled">
-                                <li><i class="fa fa-map-marker-alt"></i> Bengaluru, Karnataka</li>
-                                <li><i class="fa fa-envelope"></i> <a href="mailto:aneeshg2001@gmail.com">aneeshg2001@gmail.com</a></li>
+                                <li><i class="fa fa-map-marker"></i><span class="sr-only">Location:</span>Bengaluru,
+                                    Karnataka</li>
+                                <li><i class="fa fa-envelope-o"></i><span class="sr-only">Email:</span><a
+                                        href="mailto:aneeshg2001@gmail.com">aneeshg2001@gmail.com</a></li>
                             </ul>
                         </div>
                     </div>
                 </aside>
+
                 <aside class="skills aside section">
                     <div class="section-inner">
                         <h2 class="heading">Skills</h2>
                         <div class="content">
-                            <p>I have honed a versatile set of technical and analytical skills across various languages, frameworks, and tools – focused on high-quality, efficient web solutions.</p>
+                            <p class="intro">
+                                I have honed a diverse set of technical and analytical skills that span across multiple
+                                programming languages, frameworks, and tools. With a focus on web development and
+                                application design, I combine coding expertise with practical experience to deliver
+                                high-quality, efficient solutions. </p>
+
                             <div class="skillset">
-                                <div class="item"><h3 class="level-title">Python, JavaScript, PHP, SQL</h3><span class="level-label">Languages</span></div>
-                                <div class="item"><h3 class="level-title">React, Node.js, Flask, Django</h3><span class="level-label">Frameworks</span></div>
-                                <div class="item"><h3 class="level-title">Git, Google Analytics, Search Console</h3><span class="level-label">Tools</span></div>
-                                <div class="item"><h3 class="level-title">HTML, CSS, jQuery, Web Hosting</h3><span class="level-label">Design & Dev</span></div>
-                                <div class="item"><h3 class="level-title">Leadership, Research, Problem-Solving</h3><span class="level-label">Soft Skills</span></div>
+
+                                <div class="item">
+                                    <h3 class="level-title"> Python, JavaScript, PHP &amp; SQL</h3><span
+                                        class="level-label" data-toggle="tooltip" data-placement="left"
+                                        data-animation="true"
+                                        title="You can use the tooltip to add more info...">Languages</span>
+                                    <!-- <div class="level-bar">
+                                        <div class="level-bar-inner" data-level="85%">
+                                        </div>
+                                    </div>  -->
+                                </div>
+
+                                <div class="item">
+                                    <h3 class="level-title">React, Node.js, Flask &amp; Django</h3><span
+                                        class="level-label">Frameworks</span>
+                                    <!-- <div class="level-bar">
+                                        <div class="level-bar-inner" data-level="96%">
+                                        </div>
+                                    </div>  -->
+                                </div>
+
+                                <div class="item">
+                                    <h3 class="level-title">Git, Google Analytics &amp; Search Console</h3><span
+                                        class="level-label">Tools</span>
+                                    <!-- <div class="level-bar">
+                                        <div class="level-bar-inner" data-level="96%">
+                                        </div>
+                                    </div>  -->
+                                </div>
+
+                                <div class="item">
+                                    <h3 class="level-title">HTML, CSS, jQuery &amp; Web Hosting</h3><span
+                                        class="level-label">Design & Dev</span>
+                                    <!-- <div class="level-bar">
+                                        <div class="level-bar-inner" data-level="72%">
+                                        </div>
+                                    </div>  -->
+                                </div>
+                                <div class="item">
+                                    <h3 class="level-title">Leadership, Research &amp; Problem-Solving</h3><span
+                                        class="level-label">Soft Skills</span>
+                                    <!-- <div class="level-bar">
+                                        <div class="level-bar-inner" data-level="72%">
+                                        </div>
+                                    </div>  -->
+                                </div>
                             </div>
                         </div>
                     </div>
                 </aside>
+
+
+
                 <aside class="education aside section">
                     <div class="section-inner">
                         <h2 class="heading">Education</h2>
                         <div class="content">
                             <div class="item">
-                                <h3 class="title"><i class="fa fa-graduation-cap"></i> Master of Computer Applications</h3>
-                                <h4 class="university">PES UNIVERSITY <span class="year">(2023-2025)</span></h4>
+                                <h3 class="title"><i class="fa fa-graduation-cap"></i> Master of Computer Applications
+                                </h3>
+                                <h4 class="university">PES UNIVERSITY <span class="year">(2023-2025)</span>
+                                </h4>
                             </div>
+
                         </div>
                     </div>
                 </aside>
+
                 <aside class="languages aside section">
                     <div class="section-inner">
                         <h2 class="heading">Languages</h2>
                         <div class="content">
                             <ul class="list-unstyled">
-                                <li><span class="title">Kannada:</span> <span class="level">Native Speaker <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span></li>
-                                <li><span class="title">English:</span> <span class="level">Professional <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span></li>
-                                <li><span class="title">Hindi:</span> <span class="level">Professional <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span></li>
+                                <li class="item">
+                                    <span class="title"><strong>Kannada:</strong></span>
+                                    <span class="level">Native Speaker <br class="visible-xs" /><i
+                                            class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                                            class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                                            class="fa fa-star"></i> </span>
+                                </li>
+                                <li class="item">
+                                    <span class="title"><strong>English:</strong></span>
+                                    <span class="level">Professional Proficiency <br class="visible-sm visible-xs" /><i
+                                            class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                                            class="fa fa-star"></i> <i class="fa fa-star"></i></span>
+                                </li>
+                                <li class="item">
+                                    <span class="title"><strong>Hindi:</strong></span>
+                                    <span class="level">Professional Proficiency <br class="visible-sm visible-xs" /><i
+                                            class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                                            class="fa fa-star"></i> <i class="fa fa-star"></i></span>
+                                </li>
                             </ul>
                         </div>
                     </div>
                 </aside>
-                <aside class="conferences aside section">
+
+
+                <aside class="list conferences aside section">
                     <div class="section-inner">
                         <h2 class="heading">Certifications</h2>
                         <div class="content">
                             <ul class="list-unstyled">
-                                <li><i class="fa fa-certificate"></i> Modern Javascript Bootcamp (Udemy)</li>
-                                <li><i class="fa fa-certificate"></i> 100 Days of Code Python Bootcamp (Udemy)</li>
-                                <li><i class="fa fa-certificate"></i> Web Developer Bootcamp (Udemy)</li>
-                                <li><i class="fa fa-certificate"></i> Python (HackerRank)</li>
-                                <li><i class="fa fa-certificate"></i> Javascript (HackerRank)</li>
+                                <li><i class="fa fa-certificate"></i> The Modern Javascript Bootcamp Course (Udemy)</li>
+                                <li><i class="fa fa-certificate"></i> 100 Days of
+                                    Code: The Complete Python Pro Bootcamp
+                                    (Udemy)</li>
+                                <li><i class="fa fa-certificate"></i>The Web
+                                    Developer Bootcamp
+                                    (Udemy)</li>
+                                <li><i class="fa fa-certificate"></i>Python</a>
+                                    (Certified By HackerRank)
+                                <li><i class="fa fa-certificate"></i>Javascript
+                                    (Certified By HackerRank)</li>
                             </ul>
                         </div>
                     </div>
                 </aside>
+
+
             </div>
         </div>
     </div>
-
     <footer class="footer">
         <div class="container text-center">
-            <small class="copyright">&copy; 2025 Aneesh G</small>
-        </div>
+            <small class="copyright"> &copy; 2025 Aneesh G</small>
+        </div><!--//container-->
     </footer>
 
-    <!-- JS files -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Javascript -->
+    <script type="text/javascript" src="assets/plugins/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/jquery-rss/dist/jquery.rss.min.js"></script>
+    <!-- github activity plugin -->
+    <script type="text/javascript"
+        src="http://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
+    <script type="text/javascript"
+        src="http://caseyscarborough.github.io/github-activity/github-activity-0.1.0.min.js"></script>
+    <!-- custom js -->
+    <script type="text/javascript" src="assets/js/main.js"></script>
 </body>
+
 </html>
